@@ -252,10 +252,14 @@
   .error-msg.show{display:flex;}
 
   footer{
-    position:relative;
+    position:fixed;
     z-index:1;
+    left:50%;
+    bottom:20px;
+    transform:translateX(-50%);
+    width:100%;
     text-align:center;
-    margin-top:40px;
+    margin:0;
     font-size:11px;
     color:var(--text-3);
     letter-spacing:0.02em;
@@ -282,15 +286,16 @@
 
   /* Pantallas de poca altura: celular en horizontal, teclado abierto, notebooks chicas */
   @media (max-height:700px){
-    body{align-items:flex-start;padding-top:20px;}
+    body{align-items:center;justify-content:center;padding-top:16px;padding-bottom:16px;}
     .lens-ring{display:none;}
+    footer{bottom:10px;}
   }
   @media (max-height:560px){
     .brand{gap:12px;margin-bottom:22px;}
     .brand img{width:96px;}
     .brand-copy p{display:none;}
     form{gap:14px;}
-    footer{margin-top:18px;}
+    footer{display:none;}
   }
 
   /* Zona intermedia (481px-767px): tablets chicas, celulares grandes en horizontal,
